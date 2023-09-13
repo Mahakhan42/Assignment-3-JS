@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 JavaScript</title>
+</head>
+<style>
+    li{
+        list-style: none;
+    }
+</style>
+<body>
+    <h1>Assignment 3 JavaScript! <br><br><u>Chapter No : 14 -16 (ARRAYS):-</u></h1><br>
+<!-- JavaScript -->
+<script>
+// Q1
+document.writeln("<hr><h3>Question NO : 1 (Student Names Array)!</h3>");
+var student = [];
+student  [0] = "Laiba Rizwan";
+student  [1] = "Bilal Ansari";
+student  [2] = "Maha Khan";
+student  [3] = "Aryan";
+student  [4] = "Areeba Mirza";
+document.writeln(student);
+/* ==================================================================== */
+// Q2 (nhi krna hai)
+
+// Q3
+document.writeln("<hr><h3>Question NO : 3(Strings Array)!</h3>");
+var stringArry = ["javascript","Html","Css","Boostrape","Java","Python","Github"];
+document.writeln(stringArry);
+/* ==================================================================== */
+// Q4
+document.writeln("<hr><h3>Question NO : 4 (Numbers Array)!</h3>");
+var numberArry = [10,20,45,70,76,39,36,90];
+document.writeln(numberArry);
+/* ==================================================================== */
+// Q5
+document.writeln("<hr><h3>Question NO : 5 (Boolean Array)!</h3>");
+var booleanArry = [true,false,true,false];
+document.write(booleanArry);
+/* ==================================================================== */
+// Q6
+document.writeln("<hr><h3>Question NO : 6 (Mixed Array)!</h3>");
+var mixedArry = ["Karachi","Lahore",20,90,"Multan",45,true,79,false,"hyderabad"];
+document.writeln(mixedArry);
+/* ==================================================================== */
+// Q7
+document.write("<hr>Question NO: 7<h2>Qualifications:</h2>");
+document.write("<ol>");
+var degree = [];
+degree [0]= "<li> 1) SSC</li>";
+degree [1]= "<li>2) HSC</li>";
+degree [2]= "<li>3) BCS</li>";
+degree [3]= "<li>4) BS</li>";
+degree [4]= "<li>5) BCOM</li>";
+degree [5]= "<li>6) MS</li>";
+degree [6]= "<li>7) M. Phil</li>";
+degree [7]= "<li>8) PhD</li>";
+document.writeln(degree.join(''));
+document.write("</ol>");
+/* ==================================================================== */
+// Q8
+document.write("<hr><h3>Question NO: 8</h3>");
+var studentArry = ["Michael","John","Tony"];
+var scores = [320,230,480];
+var TotalMarks = 300;
+
+var PercentageMichael = (scores[0] / TotalMarks)*100;
+var PercentageJohn = (scores[1] / TotalMarks)*100;
+var PercentageTony = (scores[2] / TotalMarks)*100;
+document.write("Score of " +studentArry[0]+" is "+scores[0]+".Percentage : "+PercentageMichael.toFixed(2)+"%<br>");
+document.write("Score of " +studentArry[1]+" is "+scores[1]+".Percentage : "+PercentageJohn.toFixed(2)+"%<br>");
+document.write("Score of " +studentArry[2]+" is "+scores[2]+".Percentage : "+PercentageTony.toFixed(2)+"%<br>");
+/* ==================================================================== */
+// Q9
+document.write("<hr><h3>Question NO: 9</h3>");
+var colorArry = ["Red","Black","Blue","Purple","Yellow","Green<br><br>"];
+document .write(colorArry);
+// Q9 (A)
+document.write("<hr><h3>Question NO: 9 (A)</h3>");
+var color = ["Red","Black","Blue","Purple","Yellow"];
+var userInput = prompt("Enter your Colour!");
+color.unshift(userInput);
+document.write(color);
+// Q9 (B)
+document.write("<hr><h3>Question NO: 9 (B)</h3>");
+var color = ["Red","Black","Blue","Purple","Yellow"];
+var userInput = prompt("Enter your Colour!");
+color.push(userInput);
+document.write(color);
+// Q9 (C)
+document.write("<hr><h3>Question NO: 9 (C)</h3>");
+var color = ["Red","Black","Blue","Purple","Yellow"];
+var userInput1 = prompt("Enter your 1 Colour!");
+var userInput2 = prompt("Enter your 2 Colour!");
+color.unshift(userInput2);
+color.unshift(userInput1);
+document.write(color);
+// Q9 (D)
+document.write("<hr><h3>Question NO: 9 (D)</h3>");
+var arry = ["Red","Black","Blue","Purple","Yellow","Green"];
+arry.shift();
+document.write(arry);
+// Q9 (E)
+document.write("<hr><h3>Question NO: 9 (E)</h3>");
+var arry = ["Red","Black","Blue","Purple","Yellow","Green"];
+arry.pop();
+document.write(arry);
+// Q9 (F)
+document.write("<hr><h3>Question NO: 9 (F)</h3>");
+var colorArr = ["Black","Blue","Purple","Green","Pink"];
+var user = prompt("Enter your Postion");
+var userArr = prompt("Enter your Colour");
+colorArr.splice(user,0,userArr);
+document.writeln(colorArr);
+// Q9 (G)
+document.write("<hr><h3>Question NO: 9 (G)</h3>");
+var colors = ["Red", "Green", "Blue", "Yellow", "Orange"];
+document.writeln("Original Colors: "+colors); 
+var indexToDelete = parseInt(prompt("Which color Postion you want to deleted:"));
+var numberOfColorsToDelete = parseInt(prompt("how many colors you wants to delete.:"));
+var deletedColors = colors.splice(indexToDelete, numberOfColorsToDelete);               
+document.writeln("<br>Deleted Colors: " + deletedColors.join(", "));
+document.writeln("<br>Updated Array: " + colors.join(", "));
+/* ==================================================================== */
+
+// Q10
+var studentScore = [320,230,480,120];
+var scores = [320,230,480,120];
+scores.sort(function(a,b){
+    return a - b;
+})
+document.writeln("<hr><h3>Question NO : 10</h3>Scores of Students : "+studentScore);
+document.writeln("<br>Ordered Scores of Students : "+scores);
+/* ==================================================================== */
+// Q11
+document.write("<hr>Question NO : 11 <h2>Cities List :</h2>");
+var city = ["Karachi","Lahore","Quetta","Peshawar","Marree","Multan","Punjab","Hyderabad"];
+document.writeln(city);
+document.writeln("<h2>Selected City List :</h2>");
+var slectedCity = city.slice(0,3)
+document.writeln(slectedCity);
+/* ==================================================================== */
+// Q12
+document.write("<hr>Question NO : 12 <h2>Arrays :</h2>");
+var arr = ["This"," is"," my"," cat"];
+document.write(arr);
+document.write("<h2>String :</h2>");
+var convert = arr.join("");
+document.write(convert);
+/* ==================================================================== */
+// Q13
+document.write("<hr>Question NO : 13<h2>Devices:</h2>");
+var arry = ["Keyboard","Mouse","Printer","Monitor"];
+document.write(arry);
+var Items1 = ["<h3>Out:</h3>"+arry[0]];
+var Items2 = ["<h3>Out:</h3>"+arry[1]];
+var Items3 = ["<h3>Out:</h3>"+arry[2]];
+var Items4 = ["<h3>Out:</h3>"+arry[3]];
+document.write(Items1);
+document.write(Items2);
+document.write(Items3);
+document.write(Items4);
+/* ==================================================================== */
+// Q14
+document.write("<hr>Question NO : 14<h2>Devices:</h2>");
+var arry1 = ["Keyboard","Mouse","Printer","Monitor"];
+document.writeln(arry1);
+var Items1 = ["<h3>Out:</h3>"+arry[3]];
+var Items2 = ["<h3>Out:</h3>"+arry[2]];
+var Items3 = ["<h3>Out:</h3>"+arry[1]];
+var Items4 = ["<h3>Out:</h3>"+arry[0]];
+document.write(Items1);
+document.write(Items2);
+document.write(Items3);
+document.write(Items4);
+/* ==================================================================== */
+// Q15
+document.write("<hr><br><h3>Question NO : 15</h3>");
+var manufacturers = ["Dropdown Option","Apple","Samsung","Motorola","Nokia","Sony","Haier"];
+document.writeln('<select id=" manufacturers">');
+document.writeln('<option value= "'+manufacturers[0]+'">'+manufacturers[0]+'</option>');
+document.writeln('<option value= "'+manufacturers[1]+'">'+manufacturers[1]+'</option>');
+document.writeln('<option value="'+manufacturers[2]+'">'+manufacturers[2]+'</option>');
+document.writeln('<option value="'+manufacturers[3]+'">'+manufacturers[3]+'</option>');
+document.writeln('<option value="'+manufacturers[4]+'">'+manufacturers[4]+'</option>');
+document.writeln('<option value="'+manufacturers[5]+'">'+manufacturers[5]+'</option>');
+document.writeln('<option value="'+manufacturers[6]+'">'+manufacturers[6]+'</option>');
+/* ==================================================================== */
+</script>
+
+</body>
+</html>
